@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Scenic Hiking</string>
+    <string name="map_access_token">pk.eyJ1IjoibmF2YXNwayIsImEiOiJjazBuMnh5eGQwOWg1M2NxenpwMXE3aXp5In0.0D3qEG_QrxI9FcOpA71jCg</string>
+
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.design.widget.CoordinatorLayout
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/layout_coordinator"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+        <com.mapbox.mapboxsdk.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                mapbox:mapbox_cameraTargetLat="38.9098"
+                mapbox:mapbox_cameraTargetLng="-77.0295"
+                mapbox:mapbox_cameraZoom="12" />
+
+        <Button
+                android:id="@+id/startButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/gray"
+                android:enabled="false"
+                android:text="Start navigation"
+                android:textColor="@color/white"
+                mapbox:layout_constraintStart_toStartOf="parent"
+                mapbox:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+                android:id="@+id/bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_behavior="@string/bottom_sheet_behavior"
+                android:background="@drawable/bottom_sheet_shape"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/bottom_sheet_holder"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bottom_holder"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>
